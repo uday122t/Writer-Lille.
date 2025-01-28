@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الكاتبة ليل</title>
+    <meta name="description" content="الكاتبة ليل، Writer Lille، من ديره لديره، وطريق الحب قاتل.">
+    <meta name="keywords" content="الكاتبة ليل, Writer Lille, من ديره لديره, طريق الحب قاتل, حسابات الكاتبة ليل">
+    <meta name="author" content="عدي">
+    <title>حسابات الكاتبة ليل</title>
     <style>
         body {
             margin: 0;
@@ -11,15 +14,12 @@
             font-family: 'Arial', sans-serif;
             text-align: center;
             color: #333;
-            position: relative;
-            overflow: hidden;
         }
 
         /* الخلفية مع تأثير الغباش */
         body::before {
             content: "";
-            background: url('hhhh.jpg') no-repeat center center;
-            background-size: cover; /* التأكد من أن الخلفية تغطي كامل الصفحة */
+            background: url('hhhhh.jpg') no-repeat center center/cover;
             filter: blur(5px);
             position: absolute;
             top: 0;
@@ -32,14 +32,12 @@
         .container {
             position: relative;
             margin-top: 50px;
-            padding: 10px;
-            text-align: center;
         }
 
         .profile-img {
             width: 150px;
             height: 150px;
-            border-radius: 50%; /* جعل الصورة دائرية */
+            border-radius: 50%;
             border: 3px solid #fff;
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -86,71 +84,26 @@
         }
 
         .tiktok-btn {
-            background-color: #010101;
+            background-color: #000;
             color: white;
         }
 
         .tiktok-btn:hover {
-            background-color: #333333;
+            background-color: #333;
         }
 
         .btn img {
             width: 24px;
             height: 24px;
             margin-right: 10px;
-            border-radius: 50%;
+            border-radius: 50%; /* قص الصورة بشكل دائري */
         }
-
-        /* زر الصوت المتحرك عشوائي */
-        #sound-btn {
-            background-color: #ff5722;
-            border: none;
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-            position: absolute;
-            bottom: 30px;
-            right: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            animation: glow 1.5s infinite, moveButton 5s infinite;
-            transition: transform 0.3s ease;
-        }
-
-        @keyframes glow {
-            0%, 100% {
-                box-shadow: 0 0 10px 2px rgba(0, 255, 0, 0.5);
-            }
-            50% {
-                box-shadow: 0 0 20px 5px rgba(0, 255, 0, 0.8);
-            }
-        }
-
-        /* تحريك الزر بشكل عشوائي */
-        @keyframes moveButton {
-            0% {
-                transform: translate(0, 0);
-            }
-            25% {
-                transform: translate(50px, -100px);
-            }
-            50% {
-                transform: translate(-100px, 50px);
-            }
-            75% {
-                transform: translate(200px, 150px);
-            }
-            100% {
-                transform: translate(-150px, -200px);
-            }
-        }
-
     </style>
 </head>
 <body>
     <div class="container">
         <img src="ffgh.jpg" alt="صورة الكاتبة ليل" class="profile-img">
-        <h1>الكاتبة ليل</h1>
+        <h1>حسابات الكاتبة ليل</h1>
         <a href="https://www.instagram.com/llll_li16?igsh=cjN1bmh1OTVvbjZ6" target="_blank" class="btn instagram-btn">
             <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
             Instagram
@@ -166,16 +119,5 @@
             TikTok
         </a>
     </div>
-
-    <button id="sound-btn" onclick="playSound()"></button>
-
-    <audio id="sound" src="gd.mp3"></audio>
-
-    <script>
-        function playSound() {
-            var audio = document.getElementById("sound");
-            audio.play();
-        }
-    </script>
 </body>
 </html>
