@@ -11,12 +11,15 @@
             font-family: 'Arial', sans-serif;
             text-align: center;
             color: #333;
+            position: relative;
+            overflow: hidden;
         }
 
         /* الخلفية مع تأثير الغباش */
         body::before {
             content: "";
-            background: url('aaa.jpg') no-repeat center center/cover;
+            background: url('hhhh.jpg') no-repeat center center;
+            background-size: cover; /* التأكد من أن الخلفية تغطي كامل الصفحة */
             filter: blur(5px);
             position: absolute;
             top: 0;
@@ -29,12 +32,14 @@
         .container {
             position: relative;
             margin-top: 50px;
+            padding: 10px;
+            text-align: center;
         }
 
         .profile-img {
             width: 150px;
             height: 150px;
-            border-radius: 50%;
+            border-radius: 50%; /* جعل الصورة دائرية */
             border: 3px solid #fff;
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -80,12 +85,66 @@
             background-color: #e87c17;
         }
 
+        .tiktok-btn {
+            background-color: #010101;
+            color: white;
+        }
+
+        .tiktok-btn:hover {
+            background-color: #333333;
+        }
+
         .btn img {
             width: 24px;
             height: 24px;
             margin-right: 10px;
-            border-radius: 50%; /* قص الصورة بشكل دائري */
+            border-radius: 50%;
         }
+
+        /* زر الصوت المتحرك عشوائي */
+        #sound-btn {
+            background-color: #ff5722;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: glow 1.5s infinite, moveButton 5s infinite;
+            transition: transform 0.3s ease;
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 10px 2px rgba(0, 255, 0, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 20px 5px rgba(0, 255, 0, 0.8);
+            }
+        }
+
+        /* تحريك الزر بشكل عشوائي */
+        @keyframes moveButton {
+            0% {
+                transform: translate(0, 0);
+            }
+            25% {
+                transform: translate(50px, -100px);
+            }
+            50% {
+                transform: translate(-100px, 50px);
+            }
+            75% {
+                transform: translate(200px, 150px);
+            }
+            100% {
+                transform: translate(-150px, -200px);
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -101,6 +160,22 @@
             <img src="fff.jpg" alt="Wattpad">
             Wattpad
         </a>
+        <br>
+        <a href="https://www.tiktok.com/@llli_li16?_t=ZS-8tRdgQsFjFK&_r=1" target="_blank" class="btn tiktok-btn">
+            <img src="tik.jpg" alt="TikTok">
+            TikTok
+        </a>
     </div>
+
+    <button id="sound-btn" onclick="playSound()"></button>
+
+    <audio id="sound" src="gd.mp3"></audio>
+
+    <script>
+        function playSound() {
+            var audio = document.getElementById("sound");
+            audio.play();
+        }
+    </script>
 </body>
 </html>
